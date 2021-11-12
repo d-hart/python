@@ -1,12 +1,12 @@
-parrot = "Norwegian Blue"
+number = "9,223;372:036 854,775;807"
+separators = ''
 
-print(parrot)
+for char in number:
+    if not char.isnumeric():
+        separators = separators + char
 
-print(parrot[3])
-print(parrot[4])
-print(parrot[9])
-print(parrot[3])
-print(parrot[6])
-print(parrot[8])
+print(separators)
 
-print(parrot[-1])
+# This is how I want to code
+values = ''.join(char if char not in separators else "" for char in number).split()
+print(sum([int(val) for val in values]))
