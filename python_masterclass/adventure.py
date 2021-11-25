@@ -7,4 +7,5 @@ while chosen_exit not in available_exits:
         print('Game over')
         break
 
-print('Aren\'t you glad you gor out of there? ')
+else:
+    print('Aren\'t you glad you gor out of there? ')

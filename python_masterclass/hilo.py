@@ -4,9 +4,9 @@ high = 1000
 print(f'Please think of a number between {low} and {high}')
 input('Press Enter to start the game')
 
-guess = 1
+guesses = 1
 # Can't use guess != answer as the while loop condition because we don't know what the answer is
-while True: 
+while low != high: 
     guess = low + (high - low) //2
     high_low = input(f'My guess is {guess}. Should I guess higher or lower? '
                     'Enter h or l, or c if my guess was correct'.casefold())
@@ -24,4 +24,8 @@ while True:
         break
     else:
         print('Please enter h, l, or c')
-    guesses = guesses + 1
+    guesses += 1
+
+else:
+    print(f'You thought of the number {low}')
+    print(f'I got it in {guesses} guesses')
